@@ -36,6 +36,7 @@ namespace Tic_Tac_2._0
         {
             Form1.instance.sizey=hScrollBar2.Value;
             textBox2.Text = hScrollBar2.Value.ToString();
+            //aaa
         }
     }
 }
