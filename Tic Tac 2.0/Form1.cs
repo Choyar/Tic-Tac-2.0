@@ -27,7 +27,7 @@ namespace Tic_Tac_2._0
             public Bitmap nowima;
             public int[,] blocks;
             public PictureBox bg;
-            public PictureBox winline;
+            public int winline;
             public PictureBox[,] plocks;
 
             public plate(int x,int y)
@@ -293,11 +293,6 @@ namespace Tic_Tac_2._0
             //remove old plate
             try
             {
-                Controls.Remove(p.winline);
-            }
-            catch { }
-            try
-            {
                 foreach (PictureBox pic in p.plocks)
                 {
                     Controls.Remove(pic);
@@ -311,13 +306,13 @@ namespace Tic_Tac_2._0
             catch { }
 
             //set new plate
-            p = new plate(sizex, sizex);
+            p = new plate(sizex, sizey);
             p.bg = new PictureBox();
             p.bg.Size = new Size(360, 360);
             p.bg.Location = new Point(167, 28);
             for (int a = 0; a < sizex; a++)
             {
-                for (int b = 0; b < sizex; b++)
+                for (int b = 0; b < sizey; b++)
                 {
                     p.plocks[a, b] = new PictureBox();
                     p.plocks[a, b].Size = new Size((int)Math.Ceiling(((float)p.bg.Size.Width - (5 * (sizex - 1))) / sizex), (int)Math.Ceiling(((float)(p.bg.Size.Height - (5 * (sizey - 1))) / sizey)));
