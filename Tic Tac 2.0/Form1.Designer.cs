@@ -55,6 +55,7 @@
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -85,7 +86,7 @@
             this.groupBox1.Font = new System.Drawing.Font("新細明體", 12F);
             this.groupBox1.Location = new System.Drawing.Point(12, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(148, 360);
+            this.groupBox1.Size = new System.Drawing.Size(148, 317);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Player 1";
@@ -363,12 +364,23 @@
             this.toolStripLabel3.Text = "Reset";
             this.toolStripLabel3.Click += new System.EventHandler(this.ToolStripLabel3_Click);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("新細明體", 12F);
+            this.label11.Location = new System.Drawing.Point(12, 353);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(126, 32);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "Win Requirement: \r\nSide to Side";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(693, 394);
+            this.ClientSize = new System.Drawing.Size(693, 399);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -424,6 +436,7 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.ToolStripLabel toolStripLabel3;
+        private System.Windows.Forms.Label label11;
     }
 }
 
