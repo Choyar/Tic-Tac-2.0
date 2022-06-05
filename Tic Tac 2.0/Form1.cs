@@ -180,12 +180,14 @@ namespace Tic_Tac_2._0
         //default value
         public int sizex = 3, sizey = 3;
         public plate p;
+        public int[] initialQuantity;
         public player player1 =new player(1);
         public player player2 = new player(2);
         int winner = 0;
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            initialQuantity = new int[5] { 64, 10, 5, 2, 1 };
             Init();
         }
 
@@ -193,8 +195,11 @@ namespace Tic_Tac_2._0
         private void Init()
         {
             winner = 0;
-            player1.remaining = new int[] { 99, 2, 1, 0, 0 };
-            player2.remaining = new int[] { 99, 2, 1, 0, 0 };
+            for(int a=0;a<5;a++)
+            {
+                player1.remaining[a] = initialQuantity[a];
+                player2.remaining[a] = initialQuantity[a];
+            }
             foreach (GroupBox g in Controls.OfType<GroupBox>())
             {
                 foreach (Label l in g.Controls.OfType<Label>())
@@ -523,7 +528,10 @@ namespace Tic_Tac_2._0
         {
             Form2 f2 = new Form2();
             f2.ShowDialog(this);
-            Init();
+            if(f2.DialogResult==DialogResult.OK)
+            {
+                Init();
+            }
         }
 
         private void PictureBox10_Click(object sender, EventArgs e)
