@@ -29,22 +29,6 @@ namespace Tic_Tac_2._0
             public PictureBox bg;
             public int winline;
             public PictureBox[,] plocks;
-
-            public plate(int x,int y)
-            {
-                sizex = x;
-                sizey = y;
-                blocks = new int[x, y];
-                for(int a=0;a<x;a++)
-                {
-                    for(int b=0;b<y;b++)
-                    {
-                        blocks[a, b] = 0;
-                    }
-                }
-
-                plocks = new PictureBox[x, y];
-            }
             void drawwinline(int dir,int num)
             {
                 //dir==0: horizontal; num: top to bottom 0,1,2,...
@@ -78,7 +62,6 @@ namespace Tic_Tac_2._0
                 //}
 
             }
-
             public int checkwin()
             {
                 if(winline==0)
@@ -239,8 +222,58 @@ namespace Tic_Tac_2._0
                     return 0;
                 }
             }
-            public void SetPlate()
+            public void SetPlate(Form1 f,int x,int y,int locationx,int locationy,int height,int width)
             {
+                //remove old plate
+                try
+                {
+                    foreach (PictureBox pic in plocks)
+                    {
+                        f.Controls.Remove(pic);
+                    }
+                }
+                catch { }
+                try
+                {
+                    f.Controls.Remove(bg);
+                }
+                catch { }
+
+                //set new plate
+                sizex = x;
+                sizey = y;
+                blocks = new int[x, y];
+                for (int a = 0; a < x; a++)
+                {
+                    for (int b = 0; b < y; b++)
+                    {
+                        blocks[a, b] = 0;
+                    }
+                }
+
+                plocks = new PictureBox[x, y];
+                bg = new PictureBox();
+                bg.Size = new Size(width, height);
+                bg.Location = new Point(167, 28);
+                for (int a = 0; a < sizex; a++)
+                {
+                    for (int b = 0; b < sizey; b++)
+                    {
+                        plocks[a, b] = new PictureBox();
+                        plocks[a, b].Size = new Size((int)Math.Ceiling(((float)bg.Size.Width - (5 * (sizex - 1))) / sizex), (int)Math.Ceiling(((float)(bg.Size.Height - (5 * (sizey - 1))) / sizey)));
+                        plocks[a, b].Location = new Point(bg.Location.X + (a * 5 + a * plocks[a, b].Size.Width), bg.Location.Y + (b * 5 + b * plocks[a, b].Size.Height));
+                        plocks[a, b].BackColor = Color.White;
+                        plocks[a, b].Name = a.ToString() + b.ToString();
+                        plocks[a, b].SizeMode = PictureBoxSizeMode.Zoom;
+                        plocks[a, b].Click += f.Picture_Click;
+                    }
+                }
+                foreach (PictureBox pic in plocks)
+                {
+                    f.Controls.Add(pic);
+                    pic.BringToFront();
+                }
+                f.Controls.Add(bg);
 
             }
         }
@@ -262,7 +295,7 @@ namespace Tic_Tac_2._0
 
         //default value
         public int sizex = 3, sizey = 3;
-        public plate p;
+        public plate p=new plate();
         public int[] initialQuantity;
         public player player1 =new player(1);
         public player player2 = new player(2);
@@ -279,6 +312,7 @@ namespace Tic_Tac_2._0
         private void Init()
         {
             winner = 0;
+            p.turn = 2;
             for(int a=0;a<5;a++)
             {
                 player1.remaining[a] = initialQuantity[a];
@@ -296,7 +330,16 @@ namespace Tic_Tac_2._0
                 }
             }
             ResetLabels();
-            SetPlate();
+            p.SetPlate(this,sizex,sizey, 167, 28, 360, 360);
+            p.winline = inarow;
+            if (p.winline == 0)
+            {
+                label11.Text = "Win Requirement: \r\nSide to Side";
+            }
+            else
+            {
+                label11.Text = $"Win Requirement: \r\n{p.winline} in a row";
+            }
             nextturn();
         }
         private void ResetLabels()
@@ -372,58 +415,7 @@ namespace Tic_Tac_2._0
                 pictureBox10.Visible = false;
             }
         }
-        private void SetPlate()
-        {
-            //remove old plate
-            try
-            {
-                foreach (PictureBox pic in p.plocks)
-                {
-                    Controls.Remove(pic);
-                }
-            }
-            catch { }
-            try
-            {
-                Controls.Remove(p.bg);
-            }
-            catch { }
-
-            //set new plate
-            p = new plate(sizex, sizey);
-            p.bg = new PictureBox();
-            p.bg.Size = new Size(360, 360);
-            p.bg.Location = new Point(167, 28);
-            for (int a = 0; a < sizex; a++)
-            {
-                for (int b = 0; b < sizey; b++)
-                {
-                    p.plocks[a, b] = new PictureBox();
-                    p.plocks[a, b].Size = new Size((int)Math.Ceiling(((float)p.bg.Size.Width - (5 * (sizex - 1))) / sizex), (int)Math.Ceiling(((float)(p.bg.Size.Height - (5 * (sizey - 1))) / sizey)));
-                    p.plocks[a, b].Location = new Point(p.bg.Location.X + (a * 5 + a * p.plocks[a, b].Size.Width), p.bg.Location.Y + (b * 5 + b * p.plocks[a, b].Size.Height));
-                    p.plocks[a, b].BackColor = Color.White;
-                    p.plocks[a, b].Name = a.ToString() + b.ToString();
-                    p.plocks[a, b].SizeMode = PictureBoxSizeMode.Zoom;
-                    p.plocks[a, b].Click += Picture_Click;
-                }
-            }
-            foreach (PictureBox pic in p.plocks)
-            {
-                Controls.Add(pic);
-                pic.BringToFront();
-            }
-            Controls.Add(p.bg);
-
-            p.winline = inarow;
-            if (p.winline == 0)
-            {
-                label11.Text = "Win Requirement: \r\nSide to Side";
-            }
-            else
-            {
-                label11.Text = $"Win Requirement: \r\n{p.winline} in a row";
-            }
-        }
+        
 
         private void nextturn()
         {
