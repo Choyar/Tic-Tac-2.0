@@ -66,6 +66,7 @@ namespace Tic_Tac_2._0
             {
                 if(winline==0)
                 {
+                    //horizontal lines
                     for (int a = 0; a < sizey; a++)
                     {
                         int wteam = blocks[0, a] % 10;
@@ -86,6 +87,7 @@ namespace Tic_Tac_2._0
                             }
                         }
                     }
+                    //vertical lines
                     for (int a = 0; a < sizex; a++)
                     {
                         int wteam = blocks[a, 0] % 10;
@@ -108,6 +110,7 @@ namespace Tic_Tac_2._0
                     }
                     if (sizex == sizey)
                     {
+                        //left high, right low
                         int wteam = blocks[0, 0] % 10;
                         if (wteam != 0)
                         {
@@ -125,6 +128,7 @@ namespace Tic_Tac_2._0
                                 return wteam;
                             }
                         }
+                        //left low, right high
                         wteam = blocks[0, sizey - 1] % 10;
                         if (wteam != 0)
                         {
@@ -147,6 +151,7 @@ namespace Tic_Tac_2._0
                 }
                 else
                 {
+                    //horizontal lines
                     for (int a = 0; a < sizey; a++)
                     {
                         int wteam = blocks[0, a] % 10;
@@ -159,13 +164,14 @@ namespace Tic_Tac_2._0
                                 wteam = blocks[b, a] % 10;
                                 win = 1;
                             }
-                            if (win == winline)
+                            if (win == winline && wteam != 0) 
                             {
                                 drawwinline(0, a);
                                 return wteam;
                             }
                         }
                     }
+                    //vertical lines
                     for (int a = 0; a < sizex; a++)
                     {
                         int wteam = blocks[0, a] % 10;
@@ -178,7 +184,7 @@ namespace Tic_Tac_2._0
                                 wteam = blocks[a, b] % 10;
                                 win = 1;
                             }
-                            if (win == winline)
+                            if (win == winline && wteam != 0)
                             {
                                 drawwinline(1, a);
                                 return wteam;
@@ -187,36 +193,77 @@ namespace Tic_Tac_2._0
                     }
                     if (sizex == sizey)
                     {
-                        int wteam = blocks[0, 0] % 10;
-                        int win = 1;
+                        //left high, right low
                         for (int a = 0; a < sizex; a++)
                         {
-                            win++;
-                            if (blocks[a, a] % 10 != wteam)
+                            int wteam = blocks[a, 0] % 10;
+                            int win = 1;
+                            for (int b = 1; b + a < sizex; b++) 
                             {
-                                wteam = blocks[a, a] % 10;
-                                win = 1;
+                                win++;
+                                if (blocks[a+b, b] % 10 != wteam)
+                                {
+                                    wteam = blocks[a + b, b] % 10;
+                                    win = 1;
+                                }
+                                if (win == winline && wteam != 0)
+                                {
+                                    drawwinline(2, 0);
+                                    return wteam;
+                                }
+                            }
+                            wteam = blocks[0, a] % 10;
+                            win = 1;
+                            for (int b = 1; b + a < sizex; b++)
+                            {
+                                win++;
+                                if (blocks[b, a + b] % 10 != wteam) 
+                                {
+                                    wteam = blocks[b, a + b] % 10;
+                                    win = 1;
+                                }
+                                if (win == winline && wteam != 0)
+                                {
+                                    drawwinline(2, 0);
+                                    return wteam;
+                                }
                             }
                         }
-                        if (win == winline)
-                        {
-                            drawwinline(2, 0);
-                            return wteam;
-                        }
-                        wteam = blocks[0, sizey - 1] % 10;
-                        win = 1;
+                        //left low, right high
                         for (int a = 0; a < sizex; a++)
                         {
-                            if (blocks[a, sizey - 1 - a] % 10 != wteam)
+                            int wteam = blocks[sizex - 1 - a, 0] % 10;
+                            int win = 1;
+                            for (int b = 1; sizex - 1 - a - b >= 0; b++) 
                             {
-                                wteam = blocks[a, sizey - 1 - a] % 10;
-                                win = 1;
+                                win++;
+                                if (blocks[sizex - 1 - a - b, b] % 10 != wteam) 
+                                {
+                                    wteam = blocks[sizex - 1 - a - b, b] % 10;
+                                    win = 1;
+                                }
+                                if (win == winline && wteam != 0)
+                                {
+                                    drawwinline(2, 1);
+                                    return wteam;
+                                }
                             }
-                        }
-                        if (win == winline)
-                        {
-                            drawwinline(2, 1);
-                            return wteam;
+                            wteam = blocks[sizex - 1, a] % 10;
+                            win = 1;
+                            for (int b = 1; b + a < sizex; b++)
+                            {
+                                win++;
+                                if (blocks[sizex - 1 - b, a + b] % 10 != wteam) 
+                                {
+                                    wteam = blocks[sizex - 1 - b, a + b] % 10;
+                                    win = 1;
+                                }
+                                if (win == winline && wteam != 0)
+                                {
+                                    drawwinline(2, 1);
+                                    return wteam;
+                                }
+                            }
                         }
                     }
                     return 0;
@@ -313,6 +360,8 @@ namespace Tic_Tac_2._0
         {
             winner = 0;
             p.turn = 2;
+            p.nowMoving = 0;
+            p.nowima = null;
             for(int a=0;a<5;a++)
             {
                 player1.remaining[a] = initialQuantity[a];
