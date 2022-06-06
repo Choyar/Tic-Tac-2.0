@@ -37,40 +37,46 @@
             this.hScrollBar1 = new System.Windows.Forms.HScrollBar();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.hScrollBar7 = new System.Windows.Forms.HScrollBar();
+            this.hScrollBar6 = new System.Windows.Forms.HScrollBar();
+            this.hScrollBar5 = new System.Windows.Forms.HScrollBar();
+            this.hScrollBar4 = new System.Windows.Forms.HScrollBar();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.hScrollBar3 = new System.Windows.Forms.HScrollBar();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.hScrollBar4 = new System.Windows.Forms.HScrollBar();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.hScrollBar5 = new System.Windows.Forms.HScrollBar();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.hScrollBar6 = new System.Windows.Forms.HScrollBar();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.hScrollBar7 = new System.Windows.Forms.HScrollBar();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.hScrollBar8 = new System.Windows.Forms.HScrollBar();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -91,7 +97,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("新細明體", 12F);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(198, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(180, 117);
             this.groupBox1.TabIndex = 1;
@@ -174,22 +180,151 @@
             this.groupBox2.Controls.Add(this.pictureBox3);
             this.groupBox2.Controls.Add(this.pictureBox1);
             this.groupBox2.Font = new System.Drawing.Font("新細明體", 12F);
-            this.groupBox2.Location = new System.Drawing.Point(13, 136);
+            this.groupBox2.Location = new System.Drawing.Point(13, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(179, 245);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Quantities of Pieces";
             // 
-            // pictureBox1
+            // textBox7
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(17, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.textBox7.Font = new System.Drawing.Font("新細明體", 18F);
+            this.textBox7.Location = new System.Drawing.Point(69, 194);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.ReadOnly = true;
+            this.textBox7.Size = new System.Drawing.Size(37, 36);
+            this.textBox7.TabIndex = 2;
+            this.textBox7.TabStop = false;
+            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Font = new System.Drawing.Font("新細明體", 18F);
+            this.textBox6.Location = new System.Drawing.Point(69, 152);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(37, 36);
+            this.textBox6.TabIndex = 2;
+            this.textBox6.TabStop = false;
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("新細明體", 18F);
+            this.textBox5.Location = new System.Drawing.Point(69, 110);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
+            this.textBox5.Size = new System.Drawing.Size(37, 36);
+            this.textBox5.TabIndex = 2;
+            this.textBox5.TabStop = false;
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("新細明體", 18F);
+            this.textBox4.Location = new System.Drawing.Point(69, 68);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(37, 36);
+            this.textBox4.TabIndex = 2;
+            this.textBox4.TabStop = false;
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("新細明體", 18F);
+            this.textBox3.Location = new System.Drawing.Point(69, 26);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(37, 36);
+            this.textBox3.TabIndex = 2;
+            this.textBox3.TabStop = false;
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // hScrollBar7
+            // 
+            this.hScrollBar7.LargeChange = 1;
+            this.hScrollBar7.Location = new System.Drawing.Point(56, 194);
+            this.hScrollBar7.Maximum = 99;
+            this.hScrollBar7.Name = "hScrollBar7";
+            this.hScrollBar7.Size = new System.Drawing.Size(64, 36);
+            this.hScrollBar7.TabIndex = 1;
+            this.hScrollBar7.Value = 2;
+            this.hScrollBar7.Scroll += new System.Windows.Forms.ScrollEventHandler(this.HScrollBar7_Scroll);
+            // 
+            // hScrollBar6
+            // 
+            this.hScrollBar6.LargeChange = 1;
+            this.hScrollBar6.Location = new System.Drawing.Point(56, 152);
+            this.hScrollBar6.Maximum = 99;
+            this.hScrollBar6.Name = "hScrollBar6";
+            this.hScrollBar6.Size = new System.Drawing.Size(64, 36);
+            this.hScrollBar6.TabIndex = 1;
+            this.hScrollBar6.Value = 2;
+            this.hScrollBar6.Scroll += new System.Windows.Forms.ScrollEventHandler(this.HScrollBar6_Scroll);
+            // 
+            // hScrollBar5
+            // 
+            this.hScrollBar5.LargeChange = 1;
+            this.hScrollBar5.Location = new System.Drawing.Point(56, 110);
+            this.hScrollBar5.Maximum = 99;
+            this.hScrollBar5.Name = "hScrollBar5";
+            this.hScrollBar5.Size = new System.Drawing.Size(64, 36);
+            this.hScrollBar5.TabIndex = 1;
+            this.hScrollBar5.Value = 2;
+            this.hScrollBar5.Scroll += new System.Windows.Forms.ScrollEventHandler(this.HScrollBar5_Scroll);
+            // 
+            // hScrollBar4
+            // 
+            this.hScrollBar4.LargeChange = 1;
+            this.hScrollBar4.Location = new System.Drawing.Point(56, 68);
+            this.hScrollBar4.Maximum = 99;
+            this.hScrollBar4.Name = "hScrollBar4";
+            this.hScrollBar4.Size = new System.Drawing.Size(64, 36);
+            this.hScrollBar4.TabIndex = 1;
+            this.hScrollBar4.Value = 2;
+            this.hScrollBar4.Scroll += new System.Windows.Forms.ScrollEventHandler(this.HScrollBar4_Scroll);
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(123, 194);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 3;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(123, 152);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 3;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(123, 110);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 3;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(123, 68);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -212,100 +347,15 @@
             this.hScrollBar3.Value = 2;
             this.hScrollBar3.Scroll += new System.Windows.Forms.ScrollEventHandler(this.HScrollBar3_Scroll);
             // 
-            // textBox3
+            // pictureBox9
             // 
-            this.textBox3.Font = new System.Drawing.Font("新細明體", 18F);
-            this.textBox3.Location = new System.Drawing.Point(69, 26);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(37, 36);
-            this.textBox3.TabIndex = 2;
-            this.textBox3.TabStop = false;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // hScrollBar4
-            // 
-            this.hScrollBar4.LargeChange = 1;
-            this.hScrollBar4.Location = new System.Drawing.Point(56, 68);
-            this.hScrollBar4.Maximum = 99;
-            this.hScrollBar4.Name = "hScrollBar4";
-            this.hScrollBar4.Size = new System.Drawing.Size(64, 36);
-            this.hScrollBar4.TabIndex = 1;
-            this.hScrollBar4.Value = 2;
-            this.hScrollBar4.Scroll += new System.Windows.Forms.ScrollEventHandler(this.HScrollBar4_Scroll);
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("新細明體", 18F);
-            this.textBox4.Location = new System.Drawing.Point(69, 68);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(37, 36);
-            this.textBox4.TabIndex = 2;
-            this.textBox4.TabStop = false;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(17, 68);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(123, 68);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(17, 110);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 3;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(123, 110);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 3;
-            this.pictureBox6.TabStop = false;
-            // 
-            // hScrollBar5
-            // 
-            this.hScrollBar5.LargeChange = 1;
-            this.hScrollBar5.Location = new System.Drawing.Point(56, 110);
-            this.hScrollBar5.Maximum = 99;
-            this.hScrollBar5.Name = "hScrollBar5";
-            this.hScrollBar5.Size = new System.Drawing.Size(64, 36);
-            this.hScrollBar5.TabIndex = 1;
-            this.hScrollBar5.Value = 2;
-            this.hScrollBar5.Scroll += new System.Windows.Forms.ScrollEventHandler(this.HScrollBar5_Scroll);
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("新細明體", 18F);
-            this.textBox5.Location = new System.Drawing.Point(69, 110);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(37, 36);
-            this.textBox5.TabIndex = 2;
-            this.textBox5.TabStop = false;
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(17, 194);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 3;
+            this.pictureBox9.TabStop = false;
             // 
             // pictureBox7
             // 
@@ -317,84 +367,40 @@
             this.pictureBox7.TabIndex = 3;
             this.pictureBox7.TabStop = false;
             // 
-            // pictureBox8
+            // pictureBox5
             // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(123, 152);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 3;
-            this.pictureBox8.TabStop = false;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(17, 110);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 3;
+            this.pictureBox5.TabStop = false;
             // 
-            // hScrollBar6
+            // pictureBox3
             // 
-            this.hScrollBar6.LargeChange = 1;
-            this.hScrollBar6.Location = new System.Drawing.Point(56, 152);
-            this.hScrollBar6.Maximum = 99;
-            this.hScrollBar6.Name = "hScrollBar6";
-            this.hScrollBar6.Size = new System.Drawing.Size(64, 36);
-            this.hScrollBar6.TabIndex = 1;
-            this.hScrollBar6.Value = 2;
-            this.hScrollBar6.Scroll += new System.Windows.Forms.ScrollEventHandler(this.HScrollBar6_Scroll);
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(17, 68);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
             // 
-            // textBox6
+            // pictureBox1
             // 
-            this.textBox6.Font = new System.Drawing.Font("新細明體", 18F);
-            this.textBox6.Location = new System.Drawing.Point(69, 152);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(37, 36);
-            this.textBox6.TabIndex = 2;
-            this.textBox6.TabStop = false;
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(17, 194);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 3;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(123, 194);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 3;
-            this.pictureBox10.TabStop = false;
-            // 
-            // hScrollBar7
-            // 
-            this.hScrollBar7.LargeChange = 1;
-            this.hScrollBar7.Location = new System.Drawing.Point(56, 194);
-            this.hScrollBar7.Maximum = 99;
-            this.hScrollBar7.Name = "hScrollBar7";
-            this.hScrollBar7.Size = new System.Drawing.Size(64, 36);
-            this.hScrollBar7.TabIndex = 1;
-            this.hScrollBar7.Value = 2;
-            this.hScrollBar7.Scroll += new System.Windows.Forms.ScrollEventHandler(this.HScrollBar7_Scroll);
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("新細明體", 18F);
-            this.textBox7.Location = new System.Drawing.Point(69, 194);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(37, 36);
-            this.textBox7.TabIndex = 2;
-            this.textBox7.TabStop = false;
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(17, 26);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("新細明體", 12F);
-            this.button1.Location = new System.Drawing.Point(12, 387);
+            this.button1.Location = new System.Drawing.Point(199, 234);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
@@ -404,18 +410,79 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("新細明體", 12F);
-            this.button2.Location = new System.Drawing.Point(117, 387);
+            this.button2.Location = new System.Drawing.Point(303, 234);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.textBox8);
+            this.groupBox3.Controls.Add(this.checkBox1);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.hScrollBar8);
+            this.groupBox3.Font = new System.Drawing.Font("新細明體", 12F);
+            this.groupBox3.Location = new System.Drawing.Point(198, 135);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(179, 88);
+            this.groupBox3.TabIndex = 4;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Win Requirement";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(33, 52);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
+            this.textBox8.Size = new System.Drawing.Size(37, 27);
+            this.textBox8.TabIndex = 2;
+            this.textBox8.TabStop = false;
+            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Location = new System.Drawing.Point(16, 26);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(101, 20);
+            this.checkBox1.TabIndex = 0;
+            this.checkBox1.Text = "Side to Side";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.CheckBox1_CheckedChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("新細明體", 18F);
+            this.label3.Location = new System.Drawing.Point(87, 52);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 24);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "in a row";
+            // 
+            // hScrollBar8
+            // 
+            this.hScrollBar8.Enabled = false;
+            this.hScrollBar8.LargeChange = 1;
+            this.hScrollBar8.Location = new System.Drawing.Point(20, 52);
+            this.hScrollBar8.Maximum = 8;
+            this.hScrollBar8.Minimum = 2;
+            this.hScrollBar8.Name = "hScrollBar8";
+            this.hScrollBar8.Size = new System.Drawing.Size(64, 27);
+            this.hScrollBar8.TabIndex = 1;
+            this.hScrollBar8.Value = 2;
+            this.hScrollBar8.Scroll += new System.Windows.Forms.ScrollEventHandler(this.HScrollBar8_Scroll);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(207, 420);
+            this.ClientSize = new System.Drawing.Size(393, 268);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
@@ -427,16 +494,18 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -473,5 +542,10 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.HScrollBar hScrollBar8;
     }
 }

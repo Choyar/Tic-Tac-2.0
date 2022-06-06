@@ -38,6 +38,22 @@ namespace Tic_Tac_2._0
             textBox6.Text = hScrollBar6.Value.ToString();
             hScrollBar7.Value = Form1.instance.initialQuantity[4];
             textBox7.Text = hScrollBar7.Value.ToString();
+            //win requirement
+            hScrollBar8.Value = 2;
+            hScrollBar8.Maximum = new int[2] { Form1.instance.sizex, Form1.instance.sizey }.Max();
+            hScrollBar8.Value = Form1.instance.p.winline == 0 ? hScrollBar8.Maximum : Form1.instance.p.winline;
+            if (Form1.instance.p.winline==0)
+            {
+                checkBox1.Checked = true;
+                hScrollBar8.Enabled = false;
+                textBox8.Text = "--";
+            }
+            else
+            {
+                checkBox1.Checked = false;
+                hScrollBar8.Enabled = true;
+                textBox8.Text = hScrollBar8.Value.ToString();
+            }
         }
 
         private void HScrollBar1_Scroll(object sender, ScrollEventArgs e)
@@ -80,6 +96,28 @@ namespace Tic_Tac_2._0
         {
             Form1.instance.initialQuantity[4] = hScrollBar7.Value;
             textBox7.Text = hScrollBar7.Value.ToString();
+        }
+
+        private void CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox1.Checked)
+            {
+                hScrollBar8.Enabled = false;
+                Form1.instance.inarow = 0;
+                textBox8.Text = "--";
+            }
+            else
+            {
+                hScrollBar8.Enabled = true;
+                Form1.instance.inarow = hScrollBar8.Value;
+                textBox8.Text = hScrollBar8.Value.ToString();
+            }
+        }
+
+        private void HScrollBar8_Scroll(object sender, ScrollEventArgs e)
+        {
+            Form1.instance.inarow = hScrollBar8.Value;
+            textBox8.Text = hScrollBar8.Value.ToString();
         }
     }
 }

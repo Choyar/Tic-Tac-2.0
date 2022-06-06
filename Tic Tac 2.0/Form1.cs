@@ -239,6 +239,10 @@ namespace Tic_Tac_2._0
                     return 0;
                 }
             }
+            public void SetPlate()
+            {
+
+            }
         }
         public class player
         {
@@ -263,6 +267,7 @@ namespace Tic_Tac_2._0
         public player player1 =new player(1);
         public player player2 = new player(2);
         int winner = 0;
+        public int inarow = 0;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -408,6 +413,16 @@ namespace Tic_Tac_2._0
                 pic.BringToFront();
             }
             Controls.Add(p.bg);
+
+            p.winline = inarow;
+            if (p.winline == 0)
+            {
+                label11.Text = "Win Requirement: \r\nSide to Side";
+            }
+            else
+            {
+                label11.Text = $"Win Requirement: \r\n{p.winline} in a row";
+            }
         }
 
         private void nextturn()
