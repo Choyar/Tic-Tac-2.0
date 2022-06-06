@@ -64,6 +64,8 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.hScrollBar8 = new System.Windows.Forms.HScrollBar();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -77,6 +79,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -97,7 +100,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("新細明體", 12F);
-            this.groupBox1.Location = new System.Drawing.Point(198, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(180, 117);
             this.groupBox1.TabIndex = 1;
@@ -180,7 +183,7 @@
             this.groupBox2.Controls.Add(this.pictureBox3);
             this.groupBox2.Controls.Add(this.pictureBox1);
             this.groupBox2.Font = new System.Drawing.Font("新細明體", 12F);
-            this.groupBox2.Location = new System.Drawing.Point(13, 12);
+            this.groupBox2.Location = new System.Drawing.Point(202, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(179, 245);
             this.groupBox2.TabIndex = 2;
@@ -400,9 +403,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("新細明體", 12F);
-            this.button1.Location = new System.Drawing.Point(199, 234);
+            this.button1.Location = new System.Drawing.Point(202, 263);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 34);
             this.button1.TabIndex = 3;
             this.button1.Text = "Confirm";
             this.button1.UseVisualStyleBackColor = true;
@@ -410,9 +413,9 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("新細明體", 12F);
-            this.button2.Location = new System.Drawing.Point(303, 234);
+            this.button2.Location = new System.Drawing.Point(306, 263);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(75, 34);
             this.button2.TabIndex = 3;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = true;
@@ -424,16 +427,16 @@
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.hScrollBar8);
             this.groupBox3.Font = new System.Drawing.Font("新細明體", 12F);
-            this.groupBox3.Location = new System.Drawing.Point(198, 135);
+            this.groupBox3.Location = new System.Drawing.Point(12, 135);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(179, 88);
+            this.groupBox3.Size = new System.Drawing.Size(180, 97);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Win Requirement";
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(33, 52);
+            this.textBox8.Location = new System.Drawing.Point(29, 53);
             this.textBox8.Name = "textBox8";
             this.textBox8.ReadOnly = true;
             this.textBox8.Size = new System.Drawing.Size(37, 27);
@@ -446,7 +449,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(16, 26);
+            this.checkBox1.Location = new System.Drawing.Point(16, 27);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(101, 20);
             this.checkBox1.TabIndex = 0;
@@ -458,7 +461,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("新細明體", 18F);
-            this.label3.Location = new System.Drawing.Point(87, 52);
+            this.label3.Location = new System.Drawing.Point(83, 53);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 24);
             this.label3.TabIndex = 0;
@@ -468,7 +471,7 @@
             // 
             this.hScrollBar8.Enabled = false;
             this.hScrollBar8.LargeChange = 1;
-            this.hScrollBar8.Location = new System.Drawing.Point(20, 52);
+            this.hScrollBar8.Location = new System.Drawing.Point(16, 53);
             this.hScrollBar8.Maximum = 8;
             this.hScrollBar8.Minimum = 2;
             this.hScrollBar8.Name = "hScrollBar8";
@@ -477,11 +480,34 @@
             this.hScrollBar8.Value = 2;
             this.hScrollBar8.Scroll += new System.Windows.Forms.ScrollEventHandler(this.HScrollBar8_Scroll);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.checkBox2);
+            this.groupBox4.Font = new System.Drawing.Font("新細明體", 12F);
+            this.groupBox4.Location = new System.Drawing.Point(12, 238);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(180, 59);
+            this.groupBox4.TabIndex = 5;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Spetial Rule";
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(16, 25);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(105, 20);
+            this.checkBox2.TabIndex = 0;
+            this.checkBox2.Text = "Cannibalism";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.CheckBox2_CheckedChanged);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 268);
+            this.ClientSize = new System.Drawing.Size(393, 312);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -506,6 +532,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -547,5 +575,7 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.HScrollBar hScrollBar8;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }

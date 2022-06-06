@@ -174,7 +174,7 @@ namespace Tic_Tac_2._0
                     //vertical lines
                     for (int a = 0; a < sizex; a++)
                     {
-                        int wteam = blocks[0, a] % 10;
+                        int wteam = blocks[a, 0] % 10;
                         int win = 1;
                         for (int b = 1; b < sizey; b++)
                         {
@@ -348,6 +348,7 @@ namespace Tic_Tac_2._0
         public player player2 = new player(2);
         int winner = 0;
         public int inarow = 0;
+        public bool cannibalism = false;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -388,6 +389,14 @@ namespace Tic_Tac_2._0
             else
             {
                 label11.Text = $"Win Requirement: \r\n{p.winline} in a row";
+            }
+            if(cannibalism==true)
+            {
+                pictureBox11.Visible = true;
+            }
+            else
+            {
+                pictureBox11.Visible = false;
             }
             nextturn();
         }
@@ -501,10 +510,21 @@ namespace Tic_Tac_2._0
         private bool checkrule(string loc)
         {
             //check if the move is within the rule
-            if (p.nowMoving / 10 <= p.blocks[loc[0]-'0', loc[1]-'0']/10)
+            if(cannibalism==false)
             {
-                return false;
+                if (p.nowMoving / 10 <= p.blocks[loc[0] - '0', loc[1] - '0'] / 10)
+                {
+                    return false;
+                }
             }
+            else
+            {
+                if (p.nowMoving / 10 < p.blocks[loc[0] - '0', loc[1] - '0'] / 10)
+                {
+                    return false;
+                }
+            }
+            
             if(winner!=0)
             {
                 return false;
@@ -660,6 +680,14 @@ namespace Tic_Tac_2._0
             f2.ShowDialog(this);
             if(f2.DialogResult==DialogResult.OK)
             {
+                sizex = f2.sizex;
+                sizey = f2.sizey;
+                for(int a=0;a<5;a++)
+                {
+                    initialQuantity[a] =f2.initialQuantity[a];
+                }
+                inarow=f2.inarow;
+                cannibalism = f2.cannibalism;
                 Init();
             }
         }

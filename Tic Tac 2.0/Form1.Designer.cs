@@ -56,6 +56,7 @@
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -69,6 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -217,7 +219,7 @@
             this.groupBox2.Font = new System.Drawing.Font("新細明體", 12F);
             this.groupBox2.Location = new System.Drawing.Point(533, 27);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(148, 361);
+            this.groupBox2.Size = new System.Drawing.Size(148, 318);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Player 2";
@@ -368,11 +370,22 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("新細明體", 12F);
-            this.label11.Location = new System.Drawing.Point(12, 353);
+            this.label11.Location = new System.Drawing.Point(9, 353);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(126, 32);
             this.label11.TabIndex = 3;
             this.label11.Text = "Win Requirement: \r\nSide to Side";
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(533, 351);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(148, 43);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox11.TabIndex = 4;
+            this.pictureBox11.TabStop = false;
+            this.pictureBox11.Visible = false;
             // 
             // Form1
             // 
@@ -380,6 +393,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(693, 399);
+            this.Controls.Add(this.pictureBox11);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.groupBox2);
@@ -403,6 +417,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -437,6 +452,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.ToolStripLabel toolStripLabel3;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.PictureBox pictureBox11;
     }
 }
 
