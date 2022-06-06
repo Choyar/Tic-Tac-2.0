@@ -362,6 +362,8 @@ namespace Tic_Tac_2._0
         //initialize
         private void Init()
         {
+            groupBox1.Enabled = true;
+            groupBox2.Enabled = true;
             winner = 0;
             p.turn = 2;
             p.nowMoving = 0;
@@ -486,12 +488,16 @@ namespace Tic_Tac_2._0
                 //Controls.Add(p.winline);
                 //p.winline.BringToFront();
                 MessageBox.Show( $"Player {winner} wins!","Finished!");
+                groupBox1.Enabled = false;
+                groupBox2.Enabled = false;
             }
             else
             {
                 if (p.turn == 1)
                 {
                     p.turn = 2;
+                    groupBox1.Enabled = false;
+                    groupBox2.Enabled = true;
                     //change background color to orange
                     Bitmap bpm = new Bitmap(p.bg.Width, p.bg.Height);
                     Graphics g = Graphics.FromImage(bpm);
@@ -501,6 +507,8 @@ namespace Tic_Tac_2._0
                 else
                 {
                     p.turn = 1;
+                    groupBox1.Enabled = true;
+                    groupBox2.Enabled = false;
                     //change background color ot blue
                     Bitmap bpm = new Bitmap(p.bg.Width, p.bg.Height);
                     Graphics g = Graphics.FromImage(bpm);
