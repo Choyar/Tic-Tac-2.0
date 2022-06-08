@@ -703,6 +703,11 @@ namespace Tic_Tac_2._0
             }
         }
 
+        private void ToolStripLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void PictureBox10_Click(object sender, EventArgs e)
         {
             if (p.turn == player2.team && player2.remaining[4] > 0)
