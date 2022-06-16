@@ -19,7 +19,7 @@ namespace Tic_Tac_2._0
             instance = this;
         }
 
-        public class plate
+        public class board
         {
             public int turn = 2;
             int sizex, sizey;
@@ -345,7 +345,7 @@ namespace Tic_Tac_2._0
 
         //default value
         public int sizex = 3, sizey = 3;
-        public plate p=new plate();
+        public board b=new board();
         public int[] initialQuantity;
         public player player1 =new player(1);
         public player player2 = new player(2);
@@ -365,9 +365,9 @@ namespace Tic_Tac_2._0
             groupBox1.Enabled = true;
             groupBox2.Enabled = true;
             winner = 0;
-            p.turn = 2;
-            p.nowMoving = 0;
-            p.nowima = null;
+            b.turn = 2;
+            b.nowMoving = 0;
+            b.nowima = null;
             for(int a=0;a<5;a++)
             {
                 player1.remaining[a] = initialQuantity[a];
@@ -379,21 +379,21 @@ namespace Tic_Tac_2._0
                 {
                     l.Visible = true;
                 }
-                foreach(PictureBox p in g.Controls.OfType<PictureBox>())
+                foreach(PictureBox pic in g.Controls.OfType<PictureBox>())
                 {
-                    p.Visible = true;
+                    pic.Visible = true;
                 }
             }
             ResetLabels();
-            p.SetPlate(this,sizex,sizey, 167, 28, 360, 360);
-            p.winline = inarow;
-            if (p.winline == 0)
+            b.SetPlate(this,sizex,sizey, 167, 28, 360, 360);
+            b.winline = inarow;
+            if (b.winline == 0)
             {
                 label11.Text = "Win Requirement: \r\nSide to Side";
             }
             else
             {
-                label11.Text = $"Win Requirement: \r\n{p.winline} in a row";
+                label11.Text = $"Win Requirement: \r\n{b.winline} in a row";
             }
             if(cannibalism==true)
             {
@@ -482,38 +482,38 @@ namespace Tic_Tac_2._0
 
         private void nextturn()
         {
-            winner = p.checkwin();
+            winner = b.checkwin();
             if(winner!=0)
             {
-                //Controls.Add(p.winline);
-                //p.winline.BringToFront();
+                //Controls.Add(b.winline);
+                //b.winline.BringToFront();
                 MessageBox.Show( $"Player {winner} wins!","Finished!");
                 groupBox1.Enabled = false;
                 groupBox2.Enabled = false;
             }
             else
             {
-                if (p.turn == 1)
+                if (b.turn == 1)
                 {
-                    p.turn = 2;
+                    b.turn = 2;
                     groupBox1.Enabled = false;
                     groupBox2.Enabled = true;
                     //change background color to orange
-                    Bitmap bpm = new Bitmap(p.bg.Width, p.bg.Height);
+                    Bitmap bpm = new Bitmap(b.bg.Width, b.bg.Height);
                     Graphics g = Graphics.FromImage(bpm);
-                    g.FillRectangle(Brushes.Orange, 0, 0, p.bg.Width, p.bg.Height);
-                    p.bg.Image = bpm;
+                    g.FillRectangle(Brushes.Orange, 0, 0, b.bg.Width, b.bg.Height);
+                    b.bg.Image = bpm;
                 }
                 else
                 {
-                    p.turn = 1;
+                    b.turn = 1;
                     groupBox1.Enabled = true;
                     groupBox2.Enabled = false;
                     //change background color ot blue
-                    Bitmap bpm = new Bitmap(p.bg.Width, p.bg.Height);
+                    Bitmap bpm = new Bitmap(b.bg.Width, b.bg.Height);
                     Graphics g = Graphics.FromImage(bpm);
-                    g.FillRectangle(Brushes.DodgerBlue, 0, 0, p.bg.Width, p.bg.Height);
-                    p.bg.Image = bpm;
+                    g.FillRectangle(Brushes.DodgerBlue, 0, 0, b.bg.Width, b.bg.Height);
+                    b.bg.Image = bpm;
                 }
             }
         }
@@ -523,14 +523,14 @@ namespace Tic_Tac_2._0
             //check if the move is within the rule
             if(cannibalism==false)
             {
-                if (p.nowMoving / 10 <= p.blocks[loc[0] - '0', loc[1] - '0'] / 10)
+                if (b.nowMoving / 10 <= b.blocks[loc[0] - '0', loc[1] - '0'] / 10)
                 {
                     return false;
                 }
             }
             else
             {
-                if (p.nowMoving / 10 < p.blocks[loc[0] - '0', loc[1] - '0'] / 10)
+                if (b.nowMoving / 10 < b.blocks[loc[0] - '0', loc[1] - '0'] / 10)
                 {
                     return false;
                 }
@@ -546,25 +546,25 @@ namespace Tic_Tac_2._0
         //put a piece into a block
         private void Picture_Click(object sender, EventArgs e)
         {
-            if(p.nowMoving!=0)
+            if(b.nowMoving!=0)
             {
                 string loc = (sender as PictureBox).Name;
                 if (checkrule(loc))
                 {
-                    p.blocks[loc[0] - '0', loc[1] - '0'] = p.nowMoving;
-                    (sender as PictureBox).Image = p.nowima;
+                    b.blocks[loc[0] - '0', loc[1] - '0'] = b.nowMoving;
+                    (sender as PictureBox).Image = b.nowima;
                     string target = (sender as PictureBox).Name;
 
                     //take out the used piece
-                    if (p.nowMoving % 10 == player1.team)
+                    if (b.nowMoving % 10 == player1.team)
                     {
-                        player1.remaining[p.nowMoving / 10 - 1] -= 1;
+                        player1.remaining[b.nowMoving / 10 - 1] -= 1;
                     }
                     else
                     {
-                        player2.remaining[p.nowMoving / 10 - 1] -= 1;
+                        player2.remaining[b.nowMoving / 10 - 1] -= 1;
                     }
-                    p.nowMoving = 0;
+                    b.nowMoving = 0;
                     ResetLabels();
                     nextturn();
                 }
@@ -574,11 +574,11 @@ namespace Tic_Tac_2._0
         //select a piece
         private void PictureBox1_Click(object sender, EventArgs e)
         {
-            if(p.turn==player1.team&&player1.remaining[0]>0)
+            if(b.turn==player1.team&&player1.remaining[0]>0)
             {
                 ResetLabels();
-                p.nowMoving = 11;
-                p.nowima = new Bitmap((sender as PictureBox).Image);
+                b.nowMoving = 11;
+                b.nowima = new Bitmap((sender as PictureBox).Image);
                 label1.BackColor = Color.DodgerBlue;
                 label1.ForeColor = Color.White;
             }
@@ -586,11 +586,11 @@ namespace Tic_Tac_2._0
 
         private void PictureBox3_Click(object sender, EventArgs e)
         {
-            if (p.turn == player1.team && player1.remaining[1] > 0)
+            if (b.turn == player1.team && player1.remaining[1] > 0)
             {
                 ResetLabels();
-                p.nowMoving = 21;
-                p.nowima = new Bitmap((sender as PictureBox).Image);
+                b.nowMoving = 21;
+                b.nowima = new Bitmap((sender as PictureBox).Image);
                 label3.BackColor = Color.DodgerBlue;
                 label3.ForeColor = Color.White;
             }
@@ -598,11 +598,11 @@ namespace Tic_Tac_2._0
 
         private void PictureBox5_Click(object sender, EventArgs e)
         {
-            if (p.turn == player1.team && player1.remaining[2] > 0)
+            if (b.turn == player1.team && player1.remaining[2] > 0)
             {
                 ResetLabels();
-                p.nowMoving = 31;
-                p.nowima = new Bitmap((sender as PictureBox).Image);
+                b.nowMoving = 31;
+                b.nowima = new Bitmap((sender as PictureBox).Image);
                 label5.BackColor = Color.DodgerBlue;
                 label5.ForeColor = Color.White;
             }
@@ -610,11 +610,11 @@ namespace Tic_Tac_2._0
 
         private void PictureBox7_Click(object sender, EventArgs e)
         {
-            if (p.turn == player1.team && player1.remaining[3] > 0)
+            if (b.turn == player1.team && player1.remaining[3] > 0)
             {
                 ResetLabels();
-                p.nowMoving = 41;
-                p.nowima = new Bitmap((sender as PictureBox).Image);
+                b.nowMoving = 41;
+                b.nowima = new Bitmap((sender as PictureBox).Image);
                 label7.BackColor = Color.DodgerBlue;
                 label7.ForeColor = Color.White;
             }
@@ -622,11 +622,11 @@ namespace Tic_Tac_2._0
 
         private void PictureBox9_Click(object sender, EventArgs e)
         {
-            if (p.turn == player1.team && player1.remaining[4] > 0)
+            if (b.turn == player1.team && player1.remaining[4] > 0)
             {
                 ResetLabels();
-                p.nowMoving = 51;
-                p.nowima = new Bitmap((sender as PictureBox).Image);
+                b.nowMoving = 51;
+                b.nowima = new Bitmap((sender as PictureBox).Image);
                 label9.BackColor = Color.DodgerBlue;
                 label9.ForeColor = Color.White;
             }
@@ -634,11 +634,11 @@ namespace Tic_Tac_2._0
 
         private void PictureBox2_Click(object sender, EventArgs e)
         {
-            if (p.turn == player2.team && player2.remaining[0] > 0)
+            if (b.turn == player2.team && player2.remaining[0] > 0)
             {
                 ResetLabels();
-                p.nowMoving = 12;
-                p.nowima = new Bitmap((sender as PictureBox).Image);
+                b.nowMoving = 12;
+                b.nowima = new Bitmap((sender as PictureBox).Image);
                 label2.BackColor = Color.Orange;
                 label2.ForeColor = Color.White;
             }
@@ -646,11 +646,11 @@ namespace Tic_Tac_2._0
 
         private void PictureBox4_Click(object sender, EventArgs e)
         {
-            if (p.turn == player2.team && player2.remaining[1] > 0)
+            if (b.turn == player2.team && player2.remaining[1] > 0)
             {
                 ResetLabels();
-                p.nowMoving = 22;
-                p.nowima = new Bitmap((sender as PictureBox).Image);
+                b.nowMoving = 22;
+                b.nowima = new Bitmap((sender as PictureBox).Image);
                 label4.BackColor = Color.Orange;
                 label4.ForeColor = Color.White;
             }
@@ -658,11 +658,11 @@ namespace Tic_Tac_2._0
 
         private void PictureBox6_Click(object sender, EventArgs e)
         {
-            if (p.turn == player2.team && player2.remaining[2] > 0)
+            if (b.turn == player2.team && player2.remaining[2] > 0)
             {
                 ResetLabels();
-                p.nowMoving = 32;
-                p.nowima = new Bitmap((sender as PictureBox).Image);
+                b.nowMoving = 32;
+                b.nowima = new Bitmap((sender as PictureBox).Image);
                 label6.BackColor = Color.Orange;
                 label6.ForeColor = Color.White;
             }
@@ -670,11 +670,11 @@ namespace Tic_Tac_2._0
 
         private void PictureBox8_Click(object sender, EventArgs e)
         {
-            if (p.turn == player2.team && player2.remaining[3] > 0)
+            if (b.turn == player2.team && player2.remaining[3] > 0)
             {
                 ResetLabels();
-                p.nowMoving = 42;
-                p.nowima = new Bitmap((sender as PictureBox).Image);
+                b.nowMoving = 42;
+                b.nowima = new Bitmap((sender as PictureBox).Image);
                 label8.BackColor = Color.Orange;
                 label8.ForeColor = Color.White;
             }
@@ -710,11 +710,11 @@ namespace Tic_Tac_2._0
 
         private void PictureBox10_Click(object sender, EventArgs e)
         {
-            if (p.turn == player2.team && player2.remaining[4] > 0)
+            if (b.turn == player2.team && player2.remaining[4] > 0)
             {
                 ResetLabels();
-                p.nowMoving = 52;
-                p.nowima = new Bitmap((sender as PictureBox).Image);
+                b.nowMoving = 52;
+                b.nowima = new Bitmap((sender as PictureBox).Image);
                 label10.BackColor = Color.Orange;
                 label10.ForeColor = Color.White;
             }
